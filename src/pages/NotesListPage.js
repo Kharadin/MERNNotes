@@ -30,7 +30,7 @@ const NotesListPage = () => {
   }, [])
 
 let getNotes = async () => {
-    let response = await Axios.get('http://localhost:3001/getNotes')
+    let response = await Axios.get('https://notesmern220527.herokuapp.com/getNotes')
     let data = await response.data
     setNotes(data);
     console.log('data:', data)

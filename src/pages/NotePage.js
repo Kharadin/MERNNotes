@@ -36,7 +36,7 @@ const NotePage = ({history}) => {
 
      let getNote = async () => {
       if (noteId === 'new') return
-      let response = await Axios.get('http://localhost:3001/getNote', 
+      let response = await Axios.get('https://notesmern220527.herokuapp.com/getNote', 
       { params: {
          _id:noteId,
            } 
@@ -59,7 +59,7 @@ const NotePage = ({history}) => {
  // console.log(note)
 
 
- const createNote = () => {Axios.post('http://localhost:3001/createNote', 
+ const createNote = () => {Axios.post('https://notesmern220527.herokuapp.com/createNote', 
           {
             body: note.body,
             //updated: new Date()
@@ -93,7 +93,7 @@ const NotePage = ({history}) => {
 let updateNote = async () => {
   
   //let response = 
-  await Axios.put('http://localhost:3001/updateNote', 
+  await Axios.put('https://notesmern220527.herokuapp.com/updateNote', 
   { 
      _id: noteId,
      body: note.body,
@@ -120,7 +120,7 @@ let updateNote = async () => {
   //     } 
 
 let deleteNote = async ()=> {
-  let response = await Axios.delete('http://localhost:3001/deleteNote', 
+  let response = await Axios.delete('https://notesmern220527.herokuapp.com/deleteNote', 
   // with await,  was added here, the console log received the proper responce
   { data: {
     // another option was params: and req.query._id on the express side.
