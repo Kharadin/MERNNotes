@@ -4,7 +4,7 @@ const Header = () => {
 
      return (
           <div>
-               <h1>My Header</h1>
+               <h1>Феникс: Клуб Информатики и Английского</h1>
           </div>
 
      )
